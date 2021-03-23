@@ -53,7 +53,7 @@ You can then verify the risk-score of a new site using:
 
 ### expert analysis dashboard
 
-To preserve the risk-score on a specific site a dashboard builder for generating visual html dashboard output is available. It includes the option to run the [kosoh](https://www.kiras.at/gefoerderte-projekte/detail/d/kosoh/) logo classifier to detect trustmarks and payment options, provides API hooks to submit the results to the fake-shop database, includes the option for caching as well as csv input for batch processing, as well as a basic form of explainability provided by LIME and SHAP.
+To preserve the risk-score on a specific site a dashboard builder for generating visual html dashboard output is available. It includes the option to run the [kosoh](https://www.kiras.at/gefoerderte-projekte/detail/d/kosoh/) logo classifier to detect trustmarks and payment options, provides API hooks to submit the results to the [fake-shop database](https://github.com/mal2-project/fake-shop-detection_database), options for caching as well as csv handling for batch processing, as well as a basic explainability in the form of feature importance provided by LIME and SHAP.
 
     python dashboard.py -h
 	
@@ -85,7 +85,7 @@ with the optional command line arguments
 
 ![mal2detectordashboard](dashboard/oluolin.com/dashboard.png)
 
-a sample of the expert analysis dashboard is given in 'dashboard/oluolin.com/dashboard.html'
+a sample of the expert analysis dashboard is given in `dashboard/oluolin.com/dashboard.html`
 
 ## Running with Docker
 
