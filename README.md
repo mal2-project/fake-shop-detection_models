@@ -41,11 +41,11 @@ pip install -r requirements.txt
 ## Usage
 
 ### model training and risk-score verification
-Models can be trained on a set of archived html data using. Currently supported machine learning models are XGBoost and Keras Random Forest, Neural Net:
+Models can be trained on a set of archived html data using:
 
     python train.py -c [relative path to legit sites] -f [relative path to fraudulent sites]
 
-The accuracy metrics will be outputted in the shell and the model will be saved under files.
+The accuracy metrics will be outputted in the shell and the model will be saved under files. Currently supported machine learning models are XGBoost and Keras Random Forest, Neural Net.
 
 You can then verify the risk-score of a new site using:
 
