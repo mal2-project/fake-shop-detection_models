@@ -1,0 +1,115 @@
+<script>
+	function getElementsByXPath(xpath, parent)
+		{
+		let results = [];
+		let query = document.evaluate(xpath, parent || document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+		for (let i = 0, length = query.snapshotLength; i < length; ++i) {
+			results.push(query.snapshotItem(i));
+		}
+		return results;
+	}
+	
+	/*
+		reformats the lime bar diagram relative to the received numbers
+	*/
+	function updateLimeGraphics(){
+		var fraudElems = getFraudElements();
+		var safeElems = getSafeElements();
+		var allElems = fraudElems.concat(safeElems);
+		var maxVal = getMaxVal();
+		if (maxVal==0){
+			//in case all values are zero
+			maxVal = 0.00001;
+		}
+		for(var i=0, max=allElems.length; i < max; i++) {
+			var wval1 = allElems[i].width.baseVal.value;
+			var xval1 = allElems[i].x.baseVal.value;
+			//Note: 150 is the max width of the colored bars
+			var wval1_new = 150 / maxVal * wval1;
+			allElems[i].width.baseVal.value = wval1_new;
+			
+			 //check for items that need to go left of the bar by color value
+			if(allElems[i].style.fill==="rgb(31, 119, 180)"){
+				allElems[i].x.baseVal.value =xval1-wval1_new;
+			}else{
+				allElems[i].x.baseVal.value =xval1;
+			}
+			//modify the text label to output proper value
+			allElems[i].nextElementSibling.textContent = wval1;
+		}
+	}
+	
+	/*
+		modify the lime table_div overlfow css settings
+	*/
+	function updateLimeCSS(){
+		var d = document.getElementsByClassName("lime table_div");
+		if(d.length==1){
+			d[0].style.overflow="auto";
+			d[0].style.flex="unset";
+		}
+	}
+	
+	/*
+		fetches all DOM elements that belong  on the left sode of the plot
+	*/
+	function getSafeElements(){
+		var elements = getElementsByXPath("//*[local-name() ='rect']");
+		var safeElements = new Array();
+
+		for (var i=4, max=elements.length; i < max; i++) {
+			 //check for items that need to go left of the bar by color value
+			if(elements[i].style.fill==="rgb(31, 119, 180)"){
+				safeElements.push(elements[i]);
+			}else{
+				//fraudulent elements
+			}
+		}
+		return safeElements;
+	}
+	
+	/*
+		fetches all DOM elements that belong on the right side of the plot
+	*/
+	function getFraudElements(){
+		var elements = getElementsByXPath("//*[local-name() ='rect']");
+		var fraudElements = new Array();
+
+		for (var i=4, max=elements.length; i < max; i++) {
+			 //check for items that need to go left of the bar by color value
+			if(elements[i].style.fill==="rgb(31, 119, 180)"){
+				//non fraudulent elements
+			}else{
+				fraudElements.push(elements[i]);
+			}
+		}
+		return fraudElements;
+	}
+	
+	
+	/*
+		determines the max of available values
+	*/
+	function getMaxVal(){
+		var maxVal;
+		var fraudElems = getFraudElements();
+		var safeElems = getSafeElements();
+		var allElems = fraudElems.concat(safeElems);
+		for(var i=0, max=allElems.length; i < max; i++) {
+			if(i==0){
+				maxVal = allElems[i].width.baseVal.value;
+			}
+			if(allElems[i].width.baseVal.value>maxVal){
+				maxVal = allElems[i].width.baseVal.value;
+			}
+		}
+		return maxVal;
+	}
+	
+	
+	document.addEventListener("DOMContentLoaded", function() {
+		updateLimeGraphics();
+		updateLimeCSS();
+		document.title="lime explanation";
+	});
+</script>

@@ -1,0 +1,701 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>MAL2 Fake-Shop Detection - Expert Analysis - Dashboard</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Andrew Lindley">
+
+<style type="text/css">
+body {
+	background-color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #000 url(../../resources/dashboard/header.jpeg) no-repeat center center fixed; ;
+	background-size: cover;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	padding: 5px;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	height: 80px;
+	z-index: 99;
+	overflow:hidden;
+	display: flex;
+	flex-flow: row;
+}
+
+#footer
+{
+    clear: both;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: Black;
+    padding: 1px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.showme{ 
+	display: none;;
+	background-color:#cccccc;
+	padding:10px;
+	margin-left:10px;
+	margin-top:3px;
+}
+
+.heading {
+	border-width:1px;
+	font-size: 120%;
+	display:block;
+	height:20px;
+	padding:10px;
+	margin-top:20px;
+	background-color:lightblue;
+	border: 0px;
+	border: 1px solid lightblue;
+	border-radius:7px;
+}
+
+
+.slidecontainer {
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 65%;
+  float:left;
+  height: 12px;
+  border-radius: 5px;
+  background: red;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider-label{
+	width: 12%;
+	margin-left:5px;
+	margin-right:5px;
+	float:left;
+	font-size: 15px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('contrasticon.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('contrasticon.png');
+  cursor: pointer;
+}
+
+
+.shap-lime-img {
+	float: left; 
+	padding-right: 10px; 
+	margin-bottom: 1px;
+	margin-right: 10px;
+	max-height:260px;
+	clear: left;
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  max-width: 400px;
+  font-size: 12px;
+  display: block;
+  float: left;
+  position: absolute;
+  top: 0;
+}
+
+figure {
+  position: relative;
+  float: left;
+  margin: 0px;
+}
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
+
+#actual-table { border-collapse: collapse; }
+#actual-table td {
+  width: 20%;
+  padding: 10px;
+  vertical-align: top;
+}
+#actual-table td:nth-child(even) {
+  background: #ccc;
+}
+#actual-table td:nth-child(odd) {
+  background: #eee;
+}
+
+#css-table {
+  display: table;
+  margin-top: 10px;
+}
+#css-table .col {
+  display: table-cell;
+  width: 25%;
+  padding: 10px;
+  vertical-align: top;
+}
+#css-table .col:nth-child(even) {
+  background: #ccc;
+}
+#css-table .col:nth-child(odd) {
+  background: #eee;
+}
+
+
+.main-row {
+	width:100%;
+	display:table;
+}
+
+.main-col-left{
+  float: left;
+  width: 71%;
+  margin-right:10px;
+}
+
+.main-col-right{
+  float: left;
+  width: 28%;
+  overflow: hidden;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.metadata-heading{
+	float:left;
+	text-decoration: underline;
+}
+
+.metadata{
+	float:left;
+	margin-left:10px;
+}
+
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #E4E4E4;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  text-align:center;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 1px 1px;
+}
+table.blueTable tbody td {
+  word-wrap:break-word;
+  font-size: 12px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  word-wrap:break-word;
+}
+table.blueTable thead th {
+  font-size: 11px;
+  font-weight: bold;
+  border-left: 2px solid #D0E4F5;
+  word-wrap:break-word;
+  overflow:hidden;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay h3 {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay h3:hover, .overlay h3:focus, .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.clipboard-content-grid{
+	dispaly:inline-flex;
+	padding:10px;
+}
+
+.screenshot-preview{
+	width:150px;
+}
+
+.clipboard-content-grid ul {
+	display:table-row;
+	float:left;
+}
+.clipboard-content-grid ul li
+{
+	display: block;
+	list-style-type: none;
+	margin: 10px;
+	vertical-align: middle;
+	float:left
+}
+
+.folder-item{
+	width:100px;
+	overflow:hidden;
+}
+
+#filterInput {
+	width:25%;
+	height:25px;
+}
+
+</style>
+
+<!-- Scripts -->
+<script>
+//instead of hovering the showme divs we now use onclick for displaying
+function toggleShowme(i) {
+	if(document.getElementById(i).style.display==='block'){
+		 document.getElementById(i).style.display='none';
+	}else{
+		 document.getElementById(i).style.display='block';
+	}
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	
+	buildSliderColorDiv();
+	initFoldersDiv();
+		
+	function getColor(value) {
+	  //value from 0 to 1
+	  var hue = ((1 - value) * 120).toString(10);
+	  return ["hsl(", hue, ",100%,50%)"].join("");
+	}
+
+	function buildSliderColorDiv(){
+		var len = 10;
+		for (var i = 0; i <= len; i++) {
+		  var value = i / len;
+		  var d = document.createElement('div');
+		  d.style.display="none";
+		  d.textContent = "value=" + value;
+		  d.style.backgroundColor = getColor(value);
+		  document.body.appendChild(d);
+		}
+	}
+
+	function setSliderValue(slider, slider_output) {
+	  slider_output.innerHTML = slider.value;
+	  slider.style.backgroundColor = getColor(slider.value / 100);
+	}
+	
+	###DUPLICATE_JS_FOR_MODEL_START###
+	var slider_###model-name### = document.getElementById("range_###model-name###");;
+	var output_###model-name### = document.getElementById("val_range_###model-name###");
+	output_###model-name###.innerHTML = slider_###model-name###.value;
+	setSliderValue(slider_###model-name###,output_###model-name###);
+	
+	###DUPLICATE_JS_FOR_MODEL_END###
+	
+	###DUPLICATE_JS_FOR_MODEL_PLACEHOLDER###
+	
+	});
+</script>
+
+<!--loading of folders json data - without running into cross-domain access issues -->
+<script id="load_folders_var_json" src="../folders.json"></script>
+
+<!-- json data to file view for clipboard -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {	
+	initFoldersDiv();
+});
+
+function initFoldersDiv(){
+	//var folders is loaded via javascript resource (json)
+	document.getElementById("folders").innerHTML= displayJsonTree(folders);
+}
+
+function displayJsonTree( data) {
+  var htmlRetStr = "<ul class='folder-container'>";
+  for (var key in data) {
+    if (typeof(data[key])== 'object' && data[key] != null) {
+      htmlRetStr += displayJsonTree( data[key] );
+      htmlRetStr += '</ul></li>';
+    } else if(data[key]=='dir'){
+      htmlRetStr += "<li class='folder-item'>" +"<a href='"+data['link']+"'>/"+ data['name']+"</a></li><li class='folder-wrapper'>";
+    }
+    else if( key=='name' && data['type']!='dir' ){
+      htmlRetStr += "<li class='file-item'>" +"/"+ data['name']+"</li>";
+    }
+	else if( key=='image' && data['type']=='dir' ){
+		if(data['image']!=''){
+			htmlRetStr += "<li class='image-item'>" + "<a href='"+data['link']+"'><img class='screenshot-preview' src='"+data['image']+"'></img></a></li>";
+		}
+    }
+  }
+  return( htmlRetStr );
+}
+function filterJson(data,string) {
+  arr = [];
+  for (var key in data)
+    if (typeof(data[key]) == 'object' && data[key] != null) {
+      if (data['name'].indexOf(string) <= -1) {
+        for (var i = 0; i < data.children.length; i++) {
+          arr=arr.concat(filterJson(data.children[i], string));
+        }
+        return arr;
+      }
+    }
+    else {
+        if (data['name'].indexOf(string) > -1) {
+          arr = arr.concat(data);
+          return arr;
+        }
+    }
+}
+
+function solve() {
+  var toSearch=document.getElementById('filterInput').value;
+  if(toSearch.length==0){
+    document.getElementById("folders").innerHTML= displayJsonTree(folders);
+  }
+  else {
+    var str = "Searching for: " + document.getElementById('filterInput').value ;
+    document.getElementById("searchingFor").innerHTML = str;
+    document.getElementById("folders").innerHTML = displayJsonTree(filterJson(folders, document.getElementById('filterInput').value));
+  }
+}
+
+</script>
+
+<!-- clipboard to browse other sites -->
+<script>
+function openClipboard() {
+    document.getElementById("clipboard").style.width = "100%";
+}
+
+function closeClipboard() {
+    document.getElementById("clipboard").style.width = "0%";
+}
+</script>
+
+</head>
+
+<body class="home">
+
+	<div class="sticky">
+		<table width="100%">
+			<tr>
+				<td><img src="../../resources/dashboard/MalZwei_Logo_black.svg" style="float: left;" alt="MAL2 Projekt Logo" width="90px;" style="float: left; padding-right: 10px;"></td>
+
+				<td><b>MAL2 - Fake Shop Detection - Explainability Dashboard</b><br> Andrew Lindley - Olivia Dinica - Clemens Heistracher - {vorname}.{nachname}@ait.ac.at</td>
+
+				<td><a href="https://www.bmk.gv.at/" target="_blank"><img src="../../resources/dashboard/BMK.png" height="90px;" style="float: right;" alt="BMK"></a></td>
+				<td><a href="http://www.ffg.at" target="_blank"><img src="../../resources/dashboard/FFG.png" height="90px;" style="float: right;" alt="FFG"></a></td>
+				<td><a href="https://www.ait.ac.at/themen/data-science/" target="_blank"><img src="../../resources/dashboard/AIT.png" height="100px;" style="float: right;"
+					alt="AIT - Austrian Institute of Technology GmbH"></a></td>
+			</tr>
+		</table>
+	</div>
+	
+	<span style="font-size:20px;cursor:pointer;color:white;" onclick="openClipboard()">&#9776; open dashboard explorer</span>
+	
+	<div class="main-row">
+		<div class="main-col-left">
+			###DUPLICATE_HTML_FOR_MODEL_START###
+			<!--start-model-->
+			<div id="css-table">
+				<div class="col" style="align:center;">
+					<p style="text-align:center;text-decoration:underline;">Prediction des Modells ###model-name###</p>
+					<div class="slidecontainer" style="min-width:95%;float:left;">
+						<div class="slider-label" style="text-align:right;">legit ###legit-score###%</div>
+						<!--TODO AL: remove default value of 30!!-->
+						<input type="range" min="1" max="100" value="###fake-score###" class="slider" id="range_###model-name###" disabled="true" style="float:left;"><span id="val_range_###model-name###" style="display:none"/></span>
+						<div class="slider-label" style="text-align:left;">fake ###fake-score###%</div>
+					</div>
+					<div style="margin-top:5px;">
+						<table class="blueTable">
+							<thead>
+								<tr>
+									<td>model</td>
+									<td>accuracy</td>
+									<td>precision</td>
+									<td>recall</td>
+									<td>kappa</td>
+									<td>f1_score</td>
+									<td>tn</td>
+									<td>fp</td>
+									<td>fn</td>
+									<td>tp</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>###model-name###</td>
+									<td>###accuracy###%</td>
+									<td>###precision###%</td>
+									<td>###recall###%</td>
+									<td>###kappa###%</td>
+									<td>###f1_score###%</td>
+									<td>###tn###</td>
+									<td>###fp###</td>
+									<td>###fn###</td>
+									<td>###tp###</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col"><p>###model-explainer-text###</p></div>
+			</div>
+		
+			<!--display detection details-->
+			<div class="showhim">
+				<div class="heading" style="background-color:antiquewhite;border-color:antiquewhite;" onclick="toggleShowme('divShowModelResults###model-name###')">
+					###model-name### feature explanation
+				</div>
+				<div id="divShowModelResults###model-name###" class="showme" style="overflow:hidden;">
+					<!--lime-->
+					<div>
+						<!--link to display full screen-->
+						<a href="#img-###model-name###_explanation_lime">
+							<figure>
+								<img class="shap-lime-img" src="###model-name###_explanation_lime.png" alt="thumbnail">
+								<figcaption><a href="###model-name###_explanation_lime.html" target="_blank" style="color:white;">lime html</a></figcaption> 
+								
+							</figure>	
+						</a>
+
+						<!-- The full screen image, hidden by default  -->
+						<a href="#_" class="lightbox" id="img-###model-name###_explanation_lime">
+						  <img src="###model-name###_explanation_lime.png" alt="fullscreen">
+						</a>
+					</div>
+					<!--end lime-->
+					
+					<!--shap-->
+					<div>
+						<!--link to display full screen-->
+						<a href="#img-###model-name###_explanation_shap">
+							<figure>
+								<img class="shap-lime-img" src="###model-name###_explanation_shap.png" alt="thumbnail">
+								<figcaption>shap</figcaption> 
+							</figure>	
+						</a>
+
+						<!-- The full screen image, hidden by default  -->
+						<a href="#_" class="lightbox" id="img-###model-name###_explanation_shap">
+						  <img src="###model-name###_explanation_shap.png" alt="fullscreen">
+						</a>
+					</div>
+					<!--end shap-->
+				</div>
+			</div>
+			<!--end-model-->
+			###DUPLICATE_HTML_FOR_MODEL_END###
+			###DUPLICATE_HTML_FOR_MODEL_PLACEHOLDER###
+		</div>
+		<!--end main-col-left-->
+		
+		<div class="main-col-right">	
+			<div id="css-table">
+				<div class="col">
+					<p><a href="http://###shop-url###" target="_blank"><img src="screenshot.png" alt="screenshot ###shop-url###" style="max-width:100%;"></a></p>
+				</div>
+			</div>
+			<div id="css-table">
+				<div class="col">
+					<div class="metadata-heading">Shop URL</div>
+					<div class="metadata"><strong>###shop-url###</strong></div>
+				</div>
+			</div>
+			<div id="css-table">
+				<div class="col">
+					<div class="metadata-heading">Dashboard Erstellung</div>
+					<div class="metadata">###dashboard-creation-date###</div>
+				</div>
+			</div>
+			<div id="css-table">
+				<div class="col">
+					<div class="metadata-heading">Analysierter Code</div>
+					<div class="metadata"><a href="../../data/verify_sites/###shop-url###/index.html" target="_blank">Scraped HTML</a></div>
+				</div>
+			</div>
+			<div id="css-table" style="display:###waybackmachine-archive-display###;">
+				<div class="col">
+					<div class="metadata-heading">Seiten Archiv</div>
+					<div class="metadata">###waybackmachine-archive-date###</div>
+					<div class="metadata">
+						<a href="###waybackmachine-archive-link###" target="_blank">
+							<img src="../../resources/dashboard/waybackmachine.png" style="float: right; margin-left:5px;" alt="Internet Archive" width="80px;"/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="css-table" style="display:###fake-shop-db-website-submitted-display###;">
+				<div class="col">
+					<div class="metadata-heading">Submission Status</div>
+					<div class="metadata">
+						<a href="https://db-dev.malzwei.at/websites/to_check/" target="_blank">Browse Fake-Shop DB</a>
+					</div>
+					<div class="metadata">###fake-shop-db-website-submitted-message###</div>
+				</div>
+			</div>
+			<div id="css-table" style="display:###fake-shop-db-display###;">
+				<div class="col">
+					<div class="metadata-heading">Watchlist-Internet Evaluation</div>
+					<div class="metadata">###fake-shop-db-category###</div>
+					<div class="metadata">###fake-shop-db-added-date###</div>
+					<div class="metadata">
+						<a href="https://db-dev.malzwei.at/db/###fake-shop-db###/###fake-shop-db-id###/details/" target="_blank">
+							<img src="../../resources/dashboard/pdf-icon.png" style="float: right; margin-left:5px;" alt="Expert Analysis Report" width="30px;"/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="css-table" style="display:###kosoh_trustmark_detection-display###;">
+				<div class="col">
+					<div class="metadata-heading">Identifizierte trustmark/payment Logos</div></br>
+					<div class="metadata">
+						###DUPLICATE_HTML_FOR_TRUSTMARK_DETECTIONS_START###
+						<a href="###kosoh_trustmark_detection-item###" target="_blank">
+							<img src="###kosoh_trustmark_detection-item###" style="float: left;  margin-left:5px;" alt="detected via KOSOH image-classifier" height="50px;"/>
+						</a>
+						###DUPLICATE_HTML_FOR_TRUSTMARK_DETECTIONS_END###
+						###DUPLICATE_HTML_FOR_TRUSTMARK_DETECTIONS_PLACEHOLDER###
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer" id="footer">Das <a href="http://www.malzwei.at" target="_blank">Projekt MAL2</a> wird unterstützt durch finanzielle Mittel des Fördergebers BMK in <a href="https://projekte.ffg.at/projekt/3044975" target="_blank">IKT der Zukunft 6. Ausschreibung </a>der FFG
+	</div>
+	
+	<div id="clipboard" class="overlay">
+	  	<a href="javascript:void(0)" class="closebtn" onclick="closeClipboard()">&times;</a>
+	  	<div class="overlay-content">
+	  		<h3>Explore Dashboards</h3>
+			<input placeholder="filter..." id="filterInput" oninput="solve()" type="text"/>
+			<span id="searchingFor" style="color:white;display:none;"/></span>
+	  		<div class="clipboard-content-grid">
+				<div id="folders" style="color:white;"></div>
+				
+  			</div>
+		</div>
+	</div>
+</body>
+</html>

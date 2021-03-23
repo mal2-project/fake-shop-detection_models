@@ -1,0 +1,659 @@
+var folders = 
+	{
+	type: 'dir',
+	name: 'dashboard',
+	children:[
+		{
+		type: 'dir',
+		name: 'shopping-mag.de',
+		image: '../../resources/dashboard/no-preview.jpg',
+		link: '../shopping-mag.de/dashboard.html',
+		children:[]
+		},
+
+		{
+		type: 'dir',
+		name: '0815.at',
+		image: '../0815.at/screenshot.png',
+		link: '../0815.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'abc-partyservice.at',
+		image: '../abc-partyservice.at/screenshot.png',
+		link: '../abc-partyservice.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'acuygu.com',
+		image: '../acuygu.com/screenshot.png',
+		link: '../acuygu.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'adwnr.shop',
+		image: '../adwnr.shop/screenshot.png',
+		link: '../adwnr.shop/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'aerzte-praxisbedarf.de',
+		image: '../aerzte-praxisbedarf.de/screenshot.png',
+		link: '../aerzte-praxisbedarf.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'akku-staubsauger.eu',
+		image: '../akku-staubsauger.eu/screenshot.png',
+		link: '../akku-staubsauger.eu/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'alphasupplyco.com',
+		image: '../alphasupplyco.com/screenshot.png',
+		link: '../alphasupplyco.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'amazon.com',
+		image: '../amazon.com/screenshot.png',
+		link: '../amazon.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'andeking.de',
+		image: '../andeking.de/screenshot.png',
+		link: '../andeking.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'angana.at',
+		image: '../angana.at/screenshot.png',
+		link: '../angana.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'aniveri.com',
+		image: '../aniveri.com/screenshot.png',
+		link: '../aniveri.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'anzugshop.com',
+		image: '../anzugshop.com/screenshot.png',
+		link: '../anzugshop.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'aquaristikshop.com',
+		image: '../aquaristikshop.com/screenshot.png',
+		link: '../aquaristikshop.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'aronialand.at',
+		image: '../aronialand.at/screenshot.png',
+		link: '../aronialand.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'baedermaxx.at',
+		image: '../baedermaxx.at/screenshot.png',
+		link: '../baedermaxx.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'bodaflix.de',
+		image: '../bodaflix.de/screenshot.png',
+		link: '../bodaflix.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'bookotvv.com',
+		image: '../bookotvv.com/screenshot.png',
+		link: '../bookotvv.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'buchgruber.com',
+		image: '../buchgruber.com/screenshot.png',
+		link: '../buchgruber.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'byschulzy.com',
+		image: '../byschulzy.com/screenshot.png',
+		link: '../byschulzy.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'c24.life',
+		image: '../c24.life/screenshot.png',
+		link: '../c24.life/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'diezauberscheren.de',
+		image: '../diezauberscheren.de/screenshot.png',
+		link: '../diezauberscheren.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'dpbills.com',
+		image: '../dpbills.com/screenshot.png',
+		link: '../dpbills.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'dressyoyo.com',
+		image: '../dressyoyo.com/screenshot.png',
+		link: '../dressyoyo.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'e-tec.at',
+		image: '../e-tec.at/screenshot.png',
+		link: '../e-tec.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'ebaustria.com',
+		image: '../ebaustria.com/screenshot.png',
+		link: '../ebaustria.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'evenlife.de',
+		image: '../evenlife.de/screenshot.png',
+		link: '../evenlife.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'extravergine.at',
+		image: '../extravergine.at/screenshot.png',
+		link: '../extravergine.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fake4me.myshopify.com_step0_default',
+		image: '../fake4me.myshopify.com_step0_default/screenshot.png',
+		link: '../fake4me.myshopify.com_step0_default/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fake4me.myshopify.com_step1_theme_simple',
+		image: '../fake4me.myshopify.com_step1_theme_simple/screenshot.png',
+		link: '../fake4me.myshopify.com_step1_theme_simple/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fake4me.myshopify.com_step2_2nd-product-added',
+		image: '../fake4me.myshopify.com_step2_2nd-product-added/screenshot.png',
+		link: '../fake4me.myshopify.com_step2_2nd-product-added/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fake4me.myshopify.com_step3_added_impressum_and_shipping',
+		image: '../fake4me.myshopify.com_step3_added_impressum_and_shipping/screenshot.png',
+		link: '../fake4me.myshopify.com_step3_added_impressum_and_shipping/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fake4me.myshopify.com_step4_added_data-privacy-statement',
+		image: '../fake4me.myshopify.com_step4_added_data-privacy-statement/screenshot.png',
+		link: '../fake4me.myshopify.com_step4_added_data-privacy-statement/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fishspirit.ch',
+		image: '../fishspirit.ch/screenshot.png',
+		link: '../fishspirit.ch/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fitico-sportswear.com',
+		image: '../fitico-sportswear.com/screenshot.png',
+		link: '../fitico-sportswear.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'flirthub.de',
+		image: '../flirthub.de/screenshot.png',
+		link: '../flirthub.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'fraeulein-libner.myshopify.com',
+		image: '../fraeulein-libner.myshopify.com/screenshot.png',
+		link: '../fraeulein-libner.myshopify.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'gastro-trade.de',
+		image: '../gastro-trade.de/screenshot.png',
+		link: '../gastro-trade.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'geizhals.at',
+		image: '../geizhals.at/screenshot.png',
+		link: '../geizhals.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'genussland.de',
+		image: '../genussland.de/screenshot.png',
+		link: '../genussland.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'giesswein.com',
+		image: '../giesswein.com/screenshot.png',
+		link: '../giesswein.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'giofashion.shop',
+		image: '../giofashion.shop/screenshot.png',
+		link: '../giofashion.shop/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'gruener-rabe.com',
+		image: '../gruener-rabe.com/screenshot.png',
+		link: '../gruener-rabe.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'guenstigbirkenstock.de',
+		image: '../guenstigbirkenstock.de/screenshot.png',
+		link: '../guenstigbirkenstock.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'guetezeichen.at',
+		image: '../guetezeichen.at/screenshot.png',
+		link: '../guetezeichen.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'haustierbedarf.at',
+		image: '../haustierbedarf.at/screenshot.png',
+		link: '../haustierbedarf.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'hygi.de',
+		image: '../hygi.de/screenshot.png',
+		link: '../hygi.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'ionia-azure.ch',
+		image: '../ionia-azure.ch/screenshot.png',
+		link: '../ionia-azure.ch/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'iz-el.de',
+		image: '../iz-el.de/screenshot.png',
+		link: '../iz-el.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'kreakasay.com',
+		image: '../kreakasay.com/screenshot.png',
+		link: '../kreakasay.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'krilt.de',
+		image: '../krilt.de/screenshot.png',
+		link: '../krilt.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'lehner-versand.ch',
+		image: '../lehner-versand.ch/screenshot.png',
+		link: '../lehner-versand.ch/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'lerhishop.com',
+		image: '../lerhishop.com/screenshot.png',
+		link: '../lerhishop.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'linsen-experte.de',
+		image: '../linsen-experte.de/screenshot.png',
+		link: '../linsen-experte.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'luxautohandel.de',
+		image: '../luxautohandel.de/screenshot.png',
+		link: '../luxautohandel.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'luxusmarken24.com',
+		image: '../luxusmarken24.com/screenshot.png',
+		link: '../luxusmarken24.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'maxi-kategorien.com',
+		image: '../maxi-kategorien.com/screenshot.png',
+		link: '../maxi-kategorien.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'mediatempel24.com',
+		image: '../mediatempel24.com/screenshot.png',
+		link: '../mediatempel24.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'mimty.de',
+		image: '../mimty.de/screenshot.png',
+		link: '../mimty.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'mogmoc.com',
+		image: '../mogmoc.com/screenshot.png',
+		link: '../mogmoc.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'mwapkeys.com',
+		image: '../mwapkeys.com/screenshot.png',
+		link: '../mwapkeys.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'nurgutes.de',
+		image: '../nurgutes.de/screenshot.png',
+		link: '../nurgutes.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'oluolin.com',
+		image: '../oluolin.com/screenshot.png',
+		link: '../oluolin.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'oresuco.com',
+		image: '../oresuco.com/screenshot.png',
+		link: '../oresuco.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'orf.at',
+		image: '../orf.at/screenshot.png',
+		link: '../orf.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'panpix.at',
+		image: '../panpix.at/screenshot.png',
+		link: '../panpix.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'paparazzi-online.com',
+		image: '../paparazzi-online.com/screenshot.png',
+		link: '../paparazzi-online.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'pearl.ch',
+		image: '../pearl.ch/screenshot.png',
+		link: '../pearl.ch/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'premium-austria.com',
+		image: '../premium-austria.com/screenshot.png',
+		link: '../premium-austria.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'radaflix.de',
+		image: '../radaflix.de/screenshot.png',
+		link: '../radaflix.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'riu-project.com',
+		image: '../riu-project.com/screenshot.png',
+		link: '../riu-project.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'science.orf.at',
+		image: '../science.orf.at/screenshot.png',
+		link: '../science.orf.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'sedusia.ch',
+		image: '../sedusia.ch/screenshot.png',
+		link: '../sedusia.ch/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'shop.safemeditec.com',
+		image: '../shop.safemeditec.com/screenshot.png',
+		link: '../shop.safemeditec.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'stefaniesstyle.com',
+		image: '../stefaniesstyle.com/screenshot.png',
+		link: '../stefaniesstyle.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'takkti.com',
+		image: '../takkti.com/screenshot.png',
+		link: '../takkti.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'techfield.de',
+		image: '../techfield.de/screenshot.png',
+		link: '../techfield.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'techmeta.store',
+		image: '../techmeta.store/screenshot.png',
+		link: '../techmeta.store/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'testme.com',
+		image: '../testme.com/screenshot.png',
+		link: '../testme.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'titanpoint.de',
+		image: '../titanpoint.de/screenshot.png',
+		link: '../titanpoint.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'tweedheart.com',
+		image: '../tweedheart.com/screenshot.png',
+		link: '../tweedheart.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'ureesinc.xyz',
+		image: '../ureesinc.xyz/screenshot.png',
+		link: '../ureesinc.xyz/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'veenas.12streetwings.com',
+		image: '../veenas.12streetwings.com/screenshot.png',
+		link: '../veenas.12streetwings.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'versandhaus-lange.com',
+		image: '../versandhaus-lange.com/screenshot.png',
+		link: '../versandhaus-lange.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'voguehere.com',
+		image: '../voguehere.com/screenshot.png',
+		link: '../voguehere.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'watchlist-internet.at',
+		image: '../watchlist-internet.at/screenshot.png',
+		link: '../watchlist-internet.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'weingrube.com',
+		image: '../weingrube.com/screenshot.png',
+		link: '../weingrube.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'wohnenmitholz.at',
+		image: '../wohnenmitholz.at/screenshot.png',
+		link: '../wohnenmitholz.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'woombikes.com',
+		image: '../woombikes.com/screenshot.png',
+		link: '../woombikes.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'wuerth-interwerbung.de',
+		image: '../wuerth-interwerbung.de/screenshot.png',
+		link: '../wuerth-interwerbung.de/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'www.ff-wallendorf.at',
+		image: '../www.ff-wallendorf.at/screenshot.png',
+		link: '../www.ff-wallendorf.at/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'yvoisarov.com',
+		image: '../yvoisarov.com/screenshot.png',
+		link: '../yvoisarov.com/dashboard.html',
+		children:[]
+		},
+		{
+		type: 'dir',
+		name: 'zilvu.de',
+		image: '../zilvu.de/screenshot.png',
+		link: '../zilvu.de/dashboard.html',
+		children:[]
+		}
+	]
+};

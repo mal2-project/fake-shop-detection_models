@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+    mal2-fake-shop-dashboard:
+        build: 
+            context: .
+            dockerfile: ./docker/Dockerfile
+        
+        ports:
+            - "6080:80"
+            - "5900:5900"
+
+        volumes:
+            - /media/sf_win_repositories/mal2/mal2/eCommerce:/root/mal2
